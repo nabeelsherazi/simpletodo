@@ -62,8 +62,24 @@ input[type="text"] {
   max-width: 420px;
 }
 
-.check,
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 li {
+  animation: slide-up 0.4s ease;
+  display: flex;
+  align-items: center;
+}
+
+.check {
   display: flex;
   align-items: center;
 }
