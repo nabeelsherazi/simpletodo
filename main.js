@@ -3,6 +3,7 @@ const done = document.getElementById("done"); // also ul object
 const isPriority = document.getElementById("isPriority"); // input checkbox object
 const newTodoText = document.getElementById("newTodoText"); // input text object
 const addTodoButton = document.getElementById("addTodo"); // button object
+const keyIsActive = {};
 
 function addTodo() {
   // Get todo text
@@ -42,8 +43,28 @@ function markTodoDone(event) {
 }
 
 function keyHandler(event) {
-  if (event.key == "Enter" && document.activeElement == newTodoText) {
+  // Handle key ups and downs
+  if (event.type == "keydown") {
+    keyIsActive[event.key] = true;
+  }
+  if (event.type == "keyup") {
+    keyIsActive[event.key] = false;
+  }
+
+  // Check conditions
+  if (keyIsActive["Enter"] && document.activeElement == newTodoText) {
     addTodo();
+  }
+
+  if (keyIsActive["Control"] && keyIsActive["Alt"] && keyIsActive["p"]) {
+    // Control + Alt + P to toggle priority
+    isPriority.checked = !isPriority.checked;
+  }
+}
+
+function clearAllKeys() {
+  for (let key in keyIsActive) {
+    keyIsActive[key] = false;
   }
 }
 
@@ -51,3 +72,5 @@ function keyHandler(event) {
 
 addTodoButton.addEventListener("click", addTodo);
 window.addEventListener("keydown", keyHandler);
+window.addEventListener("keyup", keyHandler);
+window.addEventListener("onblur", clearAllKeys); // Clear state on tab switch
