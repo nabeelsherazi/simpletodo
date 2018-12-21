@@ -92,6 +92,7 @@ ul#todo,
 ul#done {
   list-style-type: none;
   width: 420px;
+  margin-left: 1rem;
 }
 
 .hidden {
@@ -109,7 +110,7 @@ a:hover {
 }
 
 li.priority {
-  color: #f2c078 !important;
+  color: #e89016 !important;
 }
 
 /* Edit for desktop */
