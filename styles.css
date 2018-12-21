@@ -46,6 +46,12 @@ input[type="text"] {
   border: 1px solid #7ebc89;
   width: calc(140 * 1em);
   padding-left: 6px;
+  transition: ease-in-out 0.1s;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 3px 0 #7ebc89;
 }
 
 .todoZone > * {
