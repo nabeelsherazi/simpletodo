@@ -19,7 +19,7 @@ body {
 
 .main,
 .done {
-  width: 100%;
+  width: calc(100% - 4rem);
   padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
@@ -97,8 +97,8 @@ li > input {
 ul#todo,
 ul#done {
   list-style-type: none;
-  width: 420px;
-  margin-left: 1rem;
+  width: 80vw;
+  padding-left: 1rem;
 }
 
 .hidden {
@@ -124,5 +124,10 @@ li.priority {
 @media only screen and (min-width: 786px) {
   .main {
     max-width: 60%;
+  }
+
+  ul#todo,
+  ul#done {
+    width: 420px;
   }
 }
