@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Simple Todo List</title>
+    <!-- Google Font imports -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Major+Mono+Display|Thasadith"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+  </head>
+  <body>
+    <div class="main">
+      <h1>simple todo</h1>
+      <ul id="todo"></ul>
+      <div class="todoZone">
+        <input id="newTodoText" type="text" />
+        <div class="check">
+          <input id="isPriority" type="checkbox" name="priority" />
+          <label for="isPriority">Priority</label>
+        </div>
+        <button id="addTodo" class="button">add a todo</button>
+      </div>
+
+      <div class="done hidden">
+        <h2>done</h2>
+        <ul id="done"></ul>
+      </div>
+      <p>
+        made by <a href="https://github.com/nabeelsherazi">nabeel sherazi</a>
+      </p>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
