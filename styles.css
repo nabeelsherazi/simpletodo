@@ -112,7 +112,7 @@ a {
 }
 
 a:hover {
-  border-bottom: 1px solid #5c8964;
+  border-bottom: 1px dotted #5c8964;
 }
 
 li.priority {
