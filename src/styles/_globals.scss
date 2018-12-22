@@ -1,0 +1,51 @@
+// Variables
+
+$dark: #222;
+$white: #fff;
+$primary: #7ebc89;
+$primary-alt: darken($primary, 20%);
+$priority: #e89016;
+
+// Global document styles
+
+* {
+  font: {
+    family: "Thasadith", sans-serif;
+    weight: 400;
+  }
+  color: $dark;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: {
+    family: "Major Mono Display", monospace;
+    weight: 400;
+  }
+  color: $primary;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px dotted $primary;
+  @include transition(0.1s);
+
+  &:hover {
+    border-bottom: 1px solid $primary-alt;
+  }
+}
+
+// Global classes
+
+.hidden {
+  display: none;
+}

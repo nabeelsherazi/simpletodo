@@ -1,0 +1,40 @@
+// Buttons
+
+.button {
+  @include transition(0.1s);
+  background-color: $primary;
+  color: $white;
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: $primary-alt;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Inputs
+
+input[type="text"] {
+  @include transition(0.1s);
+  border: 1px solid $primary {
+    radius: 10px;
+  }
+  width: calc(140 * 1em); // 140 characters
+  padding-left: 6px;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 3px 0 $primary;
+  }
+}
+
+.priority-checkbox {
+  display: flex;
+  align-items: center;
+}

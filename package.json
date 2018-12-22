@@ -1,0 +1,28 @@
+{
+  "name": "simpletodo",
+  "version": "1.0.0",
+  "description": "a simple todolist",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nabeelsherazi/simpletodo.git"
+  },
+  "author": "nabeelsherazi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nabeelsherazi/simpletodo/issues"
+  },
+  "homepage": "https://github.com/nabeelsherazi/simpletodo#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "fibers": "^3.1.1",
+    "gulp": "^4.0.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-sass": "^4.0.2",
+    "sass": "^1.15.2"
+  }
+}
