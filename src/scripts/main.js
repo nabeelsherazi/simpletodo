@@ -4,8 +4,6 @@ const isPriority = document.getElementById("isPriority"); // input checkbox obje
 const newTodoText = document.getElementById("newTodoText"); // input text object
 const addTodoButton = document.getElementById("addTodo"); // button object
 const keyIsActive = {};
-const appTitle = document.getElementById("app-title");
-var animationActive = false;
 
 function addTodo() {
   // Get todo text
@@ -70,28 +68,9 @@ function clearAllKeys() {
   }
 }
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-async function animateTitle() {
-  if (!animationActive) {
-    animationActive = true;
-    for (i = 0; i < 4; i++) {
-      appTitle.classList.toggle("uppercase");
-      await sleep(500);
-      appTitle.classList.toggle("uppercase");
-      await sleep(500);
-    }
-    animationActive = false;
-  }
-  return;
-}
-
 // Initialize
 
 addTodoButton.addEventListener("click", addTodo);
 window.addEventListener("keydown", keyHandler);
 window.addEventListener("keyup", keyHandler);
 window.addEventListener("onblur", clearAllKeys); // Clear state on tab switch
-appTitle.addEventListener("click", animateTitle);
